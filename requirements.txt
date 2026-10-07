@@ -1,0 +1,15 @@
+# Shared runtime packages (Python 3.13, fresh download, pinned = reproducible)
+# Qt6 - complete (Essentials + Addons: WebEngine, Charts, 3D, Multimedia, ...) incl. Designer/uic/rcc/Linguist tools
+PySide6==6.11.0
+PySide6_Essentials==6.11.0
+PySide6_Addons==6.11.0
+shiboken6==6.11.0
+# Build (.exe via PyInstaller / pyside6-deploy)
+pyinstaller==6.21.0
+
+# Live system monitor (CPU cores, RAM, processes)
+psutil>=6.0
+
+# Embedded per-CLI terminal tabs (ConPTY + VT100 grid) - Windows only
+pywinpty>=2.0; sys_platform == "win32"
+pyte>=0.8

@@ -1,0 +1,91 @@
+{
+  "probes": {},
+  "profiles": {
+    "llamacpp|gguf/qwen2.5-coder-7b-instruct-q4_0.gguf|NVIDIA GeForce RTX 5070|12227": [
+      {
+        "name": "qwen2.5-coder-7b-instruct-q4_0-balanced-p1",
+        "goal": "balanced",
+        "level": "medium",
+        "values": {
+          "ctx": 65536,
+          "predict": 2048,
+          "temperature": 0.2,
+          "top_p": 0.9,
+          "top_k": 40,
+          "min_p": 0.05,
+          "repeat_penalty": 1.0,
+          "gpu_layers": -1,
+          "kv_type": "f16",
+          "batch": 2048,
+          "parallel": 1
+        },
+        "when": 1790944854.205579,
+        "result": {
+          "ctx": 65536,
+          "gen_tps": 87.14354581525568,
+          "prompt_tps": 3842.7727277967415,
+          "vram_mb": 9707
+        },
+        "rounds": 3,
+        "stopped": "Sweetspot: Kontext 65536 bei 87 tok/s, 21 % VRAM frei",
+        "default": false
+      },
+      {
+        "name": "qwen2.5-coder-7b-instruct-q4_0-speed-p1",
+        "goal": "speed",
+        "level": "medium",
+        "values": {
+          "ctx": 16384,
+          "predict": 1024,
+          "temperature": 0.2,
+          "top_p": 0.9,
+          "top_k": 40,
+          "min_p": 0.05,
+          "repeat_penalty": 1.05,
+          "gpu_layers": -1,
+          "kv_type": "f16",
+          "batch": 2048,
+          "parallel": 1
+        },
+        "when": 1790946244.2262838,
+        "result": {
+          "ctx": 16384,
+          "gen_tps": 99.3315200047341,
+          "prompt_tps": 4732.612406499469,
+          "vram_mb": 8612
+        },
+        "rounds": 1,
+        "stopped": "Sweetspot: 99 tok/s bei Kontext 16384",
+        "default": false
+      },
+      {
+        "name": "qwen2.5-coder-7b-instruct-q4_0-context-p1",
+        "goal": "context",
+        "level": "medium",
+        "values": {
+          "ctx": 131072,
+          "predict": 2048,
+          "temperature": 0.2,
+          "top_p": 0.9,
+          "top_k": 40,
+          "min_p": 0.05,
+          "repeat_penalty": 1.05,
+          "gpu_layers": -1,
+          "kv_type": "q8_0",
+          "batch": 2048,
+          "parallel": 1
+        },
+        "when": 1790947417.1817894,
+        "result": {
+          "ctx": 131072,
+          "gen_tps": 3.383882051407216,
+          "prompt_tps": 41.951975441245196,
+          "vram_mb": 11380
+        },
+        "rounds": 3,
+        "stopped": "Sweetspot: Kontext 98304 bei 64 tok/s, 6 % VRAM frei",
+        "default": true
+      }
+    ]
+  }
+}

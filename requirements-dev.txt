@@ -1,0 +1,2 @@
+# Obsolete: PyInstaller is now part of requirements.txt (the runtime is "Qt6 complete + dev tools").
+# Kept as an empty file so old instructions do not fail.

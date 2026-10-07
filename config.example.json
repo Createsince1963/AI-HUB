@@ -1,0 +1,46 @@
+{
+  "version": "0.1.0",
+  "theme": "light",
+  "auto_start": false,
+  "verbose": false,
+  "tools": {
+    "claude": {
+      "enabled": true,
+      "path": "C:\\Users\\Thomas\\.claude-code\\bin\\claude.exe",
+      "api_key": "",
+      "model": "claude-opus"
+    },
+    "ollama": {
+      "enabled": true,
+      "path": "{ROOT}/AI_Ollama_portable/ollama.exe",
+      "port": 11434,
+      "model": "mistral",
+      "url": "http://localhost:11434"
+    },
+    "comfyui": {
+      "enabled": true,
+      "path": "F:\\ComfyUI",
+      "port": 8188,
+      "gpu": "NVIDIA"
+    },
+    "openwebui": {
+      "enabled": true,
+      "path": "F:\\open-webui",
+      "port": 3000,
+      "ollama_url": "http://localhost:11434"
+    },
+    "node": {
+      "enabled": true,
+      "path": "C:\\Program Files\\nodejs\\node.exe"
+    },
+    "mcp": {
+      "enabled": true,
+      "path": "{ROOT}/mcp-server",
+      "port": 9000
+    }
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "~/.ai_launcher/launcher.log"
+  }
+}
